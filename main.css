@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+body {
+  height: 5000px;
+}
+
+#scrollUp {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 8px;
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+}
