@@ -1,0 +1,12 @@
+#scrollUp {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 8px;
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+}
