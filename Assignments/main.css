@@ -10,3 +10,51 @@
   bottom: 25px;
   right: 30px;
 }
+
+/* ############################################################################################### */
+ul {
+  width: 50%;
+  background-color: #ddd;
+  margin: 70px 0 30px;
+  padding: 15px;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+ul li {
+  width: 70px;
+  height: 60px;
+  opacity: .5;
+}
+
+ul li:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+ul li.active {
+  opacity: 1;
+}
+
+ul :first-child{
+  background-color: red;
+}
+
+ul :nth-child(2){
+  background-color: green;
+}
+
+ul :nth-child(3){
+  background-color: blue;
+}
+
+ul :last-child{
+  background-color: black;
+}
+
+.container {
+  width: 540px;
+  height: 300px;
+  background-color: red;
+}
