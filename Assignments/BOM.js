@@ -110,3 +110,56 @@ let timerIndex1 = setInterval( () => {
 
 
 // ################################################################################################
+let fontFamily = document.getElementById('font');
+let fontSize = document.getElementById('size');
+let color = document.getElementById('color');
+
+fontFamily.value = localStorage.getItem('font family');
+fontSize.value = localStorage.getItem('font size');
+color.value = localStorage.getItem('color');
+
+document.body.style = `
+  font-family: ${localStorage.getItem('font family') ? localStorage.getItem('font family') : fontFamily.value};
+  font-size: ${localStorage.getItem('font size') ? localStorage.getItem('font size') : fontSize.value}px;
+  color: ${localStorage.getItem('color') ? localStorage.getItem('color') : color.value};
+`;
+
+fontFamily.addEventListener('change', (e) => {
+  localStorage.setItem('font family', e.target.value);
+  document.body.style.fontFamily = localStorage.getItem('font family');
+});
+
+fontSize.addEventListener('change', (e) => {
+  localStorage.setItem('font size', e.target.value);
+  document.body.style.fontSize = localStorage.getItem('font size') + 'px';
+});
+
+color.addEventListener('change', (e) => {
+  localStorage.setItem('color', e.target.value);
+  document.body.style.color = localStorage.getItem('color');
+});
+
+
+// ################################################################################################
+let userName = document.getElementById('name');
+let email = document.getElementById('email');
+let job = document.getElementById('job');
+
+userName.value = sessionStorage.getItem('user name') ? sessionStorage.getItem('user name') : userName.value;
+email.value = sessionStorage.getItem('email') ? sessionStorage.getItem('email') : email.value;
+job.value =sessionStorage.getItem('job') ? sessionStorage.getItem('job') : job.value;
+
+userName.addEventListener('input', (e) => {
+  sessionStorage.setItem('user name', e.target.value);
+});
+
+email.addEventListener('input', (e) => {
+  sessionStorage.setItem('email', e.target.value);
+});
+
+job.addEventListener('change', (e) => {
+  sessionStorage.setItem('job', e.target.value);
+});
+
+
+// ################################################################################################
